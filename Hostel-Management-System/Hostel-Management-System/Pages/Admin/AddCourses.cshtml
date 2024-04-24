@@ -1,0 +1,45 @@
+﻿@page
+@model Hostel_Management_System.Pages.Admin.AddCoursesModel
+@{
+}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        .form-container {
+            border: 1px solid #ced4da; /* Add border */
+            border-radius: 5px; /* Optional: Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+            padding: 20px; /* Optional: Add padding for better appearance */
+            margin-top: 20px; /* Optional: Add margin to separate from the heading */
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center mt-5">Add Courses</h2>
+            <div class="col-md-4"></div>
+            <div class="col-md-4 form-container p-5"> <!-- Add custom class to div -->
+                <form method="post">
+                    <div class="mb-3">
+                        <label>Course_Code</label>
+                        <input asp-for="Courses.course_code" class="form-control" placeholder="Enter Course_Code">
+                    </div>
+                    <div class="mb-3">
+                        <label>Course_Name</label>
+                        <input asp-for="Courses.course_Name" class="form-control" placeholder="Enter Course_Name">
+                    </div>
+                    <button type="submit" class="btn btn-primary ">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
